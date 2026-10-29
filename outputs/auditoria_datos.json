@@ -1,0 +1,43 @@
+{
+  "filas": 20640,
+  "columnas": 9,
+  "faltantes_por_columna": {
+    "MedInc": 0,
+    "HouseAge": 0,
+    "AveRooms": 0,
+    "AveBedrms": 0,
+    "Population": 0,
+    "AveOccup": 0,
+    "Latitude": 0,
+    "Longitude": 0,
+    "MedHouseVal": 0
+  },
+  "duplicados_completos": 0,
+  "pares_coordenadas_unicos": 12590,
+  "filas_con_coordenada_repetida": 12403,
+  "max_filas_misma_coordenada": 15,
+  "objetivo_maximo": 5.00001,
+  "objetivo_minimo": 0.14999,
+  "n_en_techo_objetivo": 965,
+  "pct_en_techo_objetivo": 4.675,
+  "n_HouseAge_en_maximo_52": 1273,
+  "n_MedInc_en_maximo": 49,
+  "MedInc_maximo": 15.0001,
+  "n_AveOccup_mayor_10": 37,
+  "n_AveRooms_mayor_20": 69,
+  "huellas": {
+    "csv_trabajo": "94ef369b909f5c725340b512b7c9a05c1550a554b6592d29303990e3ba521a1f",
+    "../california_housing.csv": "94ef369b909f5c725340b512b7c9a05c1550a554b6592d29303990e3ba521a1f",
+    "../Entrega_final_final.ipynb": "4fc93d7cabae5806a82b1054b64f6d5b33d6b5abff9b9f90ce50257f02512e98",
+    "evidencia_original/Entrega_final_final.ipynb": null
+  },
+  "entorno": {
+    "python": "3.13.11",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "scikit_learn": "1.6.1",
+    "statsmodels": "0.14.6",
+    "plataforma": "macOS-26.2-arm64-arm-64bit-Mach-O"
+  },
+  "segundos_ejecucion": 170.3
+}

@@ -1,0 +1,99 @@
+{
+  "proyecto": "Valor mediano de la vivienda en California (censo 1990): precisión de modelos no lineales y validación con separación espacial",
+  "version_protocolo": "1.1",
+  "fecha_protocolo": "2026-10-28",
+  "datos": {
+    "ruta": "data/california_housing.csv",
+    "sha256": "94ef369b909f5c725340b512b7c9a05c1550a554b6592d29303990e3ba521a1f",
+    "filas_esperadas": 20640,
+    "predictores": [
+      "MedInc",
+      "HouseAge",
+      "AveRooms",
+      "AveBedrms",
+      "Population",
+      "AveOccup",
+      "Latitude",
+      "Longitude"
+    ],
+    "objetivo": "MedHouseVal",
+    "techo_objetivo": 5.00001,
+    "n_techo_esperado": 965,
+    "unidad_objetivo_usd": 100000
+  },
+  "originales": {
+    "comentario": "Archivos del trabajo original. Son opcionales: si faltan (por ejemplo, en el paquete público) la comprobación queda N/A y no cuenta como superada; si están presentes con otra huella, la ejecución se detiene. La huella del CSV de trabajo (datos.sha256) es siempre obligatoria.",
+    "archivos": {
+      "../california_housing.csv": "94ef369b909f5c725340b512b7c9a05c1550a554b6592d29303990e3ba521a1f",
+      "../Entrega_final_final.ipynb": "4fc93d7cabae5806a82b1054b64f6d5b33d6b5abff9b9f90ce50257f02512e98",
+      "evidencia_original/Entrega_final_final.ipynb": "4fc93d7cabae5806a82b1054b64f6d5b33d6b5abff9b9f90ce50257f02512e98"
+    },
+    "exigir_presencia": false
+  },
+  "semilla": 123,
+  "modelos": {
+    "media": {
+      "descripcion": "Media del objetivo en el entrenamiento"
+    },
+    "mco": {
+      "descripcion": "MCO con intercepto y los ocho predictores originales"
+    },
+    "rf": {
+      "n_estimators": 300,
+      "random_state": 123,
+      "max_depth": null,
+      "min_samples_split": 2
+    },
+    "gb": {
+      "n_estimators": 300,
+      "learning_rate": 0.05,
+      "max_depth": 3,
+      "random_state": 123
+    }
+  },
+  "disenos": {
+    "holdout_original": {
+      "test_size": 0.2,
+      "random_state": 123
+    },
+    "aleatorio_5f": {
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 123
+    },
+    "espacial_5f": {
+      "n_splits": 5,
+      "tamano_celda_grados": 0.5,
+      "definicion_celda": "floor(Latitude/0.5), floor(Longitude/0.5)",
+      "margen_km": 10.0,
+      "regla_margen": "Se excluye del entrenamiento toda observación a distancia haversine estrictamente menor que margen_km de alguna observación de prueba",
+      "radio_tierra_km": 6371.0088
+    }
+  },
+  "referencias_revision_independiente": {
+    "comentario": "Valores diagnósticos del split original 80/20, semilla 123. No se fuerzan; se reporta la diferencia.",
+    "media_rmse": 1.153189,
+    "mco_rmse": 0.719738,
+    "mco_r2": 0.610455,
+    "rf_rmse": 0.496417,
+    "rf_r2": 0.814688,
+    "gb_rmse": 0.504268,
+    "gb_r2": 0.808781,
+    "tolerancia": 1e-06
+  },
+  "segmentos": {
+    "bandas_valor_observado": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      5.00001
+    ],
+    "comentario_bandas": "Intervalos [a, b) en unidades de 100.000 USD de 1990. La banda [5, 5,00001) contiene las 27 filas con valor exactamente 5,0 (no están en el techo). Las 965 filas en el techo 5,00001 forman su propio segmento.",
+    "celda_mapa_grados": 0.5,
+    "n_minimo_celda_mapa": 20
+  },
+  "tolerancia_recalculo_metricas": 1e-09
+}

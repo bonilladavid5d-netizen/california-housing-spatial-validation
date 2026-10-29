@@ -1,0 +1,58 @@
+comprobacion,estado,detalle
+huella SHA-256 del CSV de trabajo,PASS,94ef369b909f5c72…
+"estructura: 20.640 filas, 9 columnas, sin faltantes",PASS,20640×9
+"965 observaciones en el techo 5,00001",PASS,965
+original opcional ../california_housing.csv sin cambios (antes),PASS,huella coincide
+original opcional ../Entrega_final_final.ipynb sin cambios (antes),PASS,huella coincide
+original opcional evidencia_original/Entrega_final_final.ipynb sin cambios (antes),NO DISPONIBLE,NO DISPONIBLE en esta copia; no se verifica
+holdout_original f1: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+holdout_original f1: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+aleatorio_5f f1: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+aleatorio_5f f1: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+aleatorio_5f f2: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+aleatorio_5f f2: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+aleatorio_5f f3: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+aleatorio_5f f3: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+aleatorio_5f f4: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+aleatorio_5f f4: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+aleatorio_5f f5: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+aleatorio_5f f5: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+aleatorio_5f: cada fila aparece en prueba exactamente una vez,PASS,"filas en prueba=20640, únicas=20640, n=20640"
+espacial_5f f1: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+espacial_5f f1: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+espacial_5f f2: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+espacial_5f f2: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+espacial_5f f3: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+espacial_5f f3: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+espacial_5f f4: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+espacial_5f f4: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+espacial_5f f5: sin solapamiento entrenamiento-prueba,PASS,intersección=0
+espacial_5f f5: entrenamiento final ⊆ entrenamiento inicial,PASS,filas fuera=0
+espacial_5f: cada fila aparece en prueba exactamente una vez,PASS,"filas en prueba=20640, únicas=20640, n=20640"
+espacial: cada celda pertenece a un solo fold,PASS,"celdas=176, con más de un fold=0"
+espacial f1: distancia mínima entrenamiento-prueba ≥ 10.0 km,PASS,mínima=10.006 km (fuerza bruta)
+espacial f1: toda fila excluida está a < 10.0 km de prueba,PASS,"excluidas=3216, máxima=9.947 km"
+espacial f1: ninguna celda de prueba en entrenamiento,PASS,celdas compartidas=0
+espacial f2: distancia mínima entrenamiento-prueba ≥ 10.0 km,PASS,mínima=10.007 km (fuerza bruta)
+espacial f2: toda fila excluida está a < 10.0 km de prueba,PASS,"excluidas=3368, máxima=9.997 km"
+espacial f2: ninguna celda de prueba en entrenamiento,PASS,celdas compartidas=0
+espacial f3: distancia mínima entrenamiento-prueba ≥ 10.0 km,PASS,mínima=10.008 km (fuerza bruta)
+espacial f3: toda fila excluida está a < 10.0 km de prueba,PASS,"excluidas=944, máxima=9.984 km"
+espacial f3: ninguna celda de prueba en entrenamiento,PASS,celdas compartidas=0
+espacial f4: distancia mínima entrenamiento-prueba ≥ 10.0 km,PASS,mínima=10.008 km (fuerza bruta)
+espacial f4: toda fila excluida está a < 10.0 km de prueba,PASS,"excluidas=2294, máxima=9.988 km"
+espacial f4: ninguna celda de prueba en entrenamiento,PASS,celdas compartidas=0
+espacial f5: distancia mínima entrenamiento-prueba ≥ 10.0 km,PASS,mínima=10.002 km (fuerza bruta)
+espacial f5: toda fila excluida está a < 10.0 km de prueba,PASS,"excluidas=2002, máxima=9.989 km"
+espacial f5: ninguna celda de prueba en entrenamiento,PASS,celdas compartidas=0
+todos los modelos se estimaron en todos los folds,PASS,sin fallos
+todas las predicciones existen (mismas filas para los cuatro modelos),PASS,predicciones faltantes=0
+aleatorio_5f: una predicción fuera de muestra por fila y modelo,PASS,"filas=20640, únicas=20640"
+espacial_5f: una predicción fuera de muestra por fila y modelo,PASS,"filas=20640, únicas=20640"
+holdout: los cuatro modelos evaluados en las mismas 4.128 filas de prueba,PASS,filas=4128
+métricas recalculadas desde outputs/predicciones.csv coinciden,PASS,"diferencia máxima=5.04e-10 (tolerancia 1e-09), filas de métricas=56"
+informativa: RMSE global (agrupado) difiere del promedio de RMSE por fold,PASS,diferencia máxima=0.0048; la tabla usa siempre el agrupado
+CSV de trabajo sin cambios (después),PASS,
+original opcional ../california_housing.csv sin cambios (después),PASS,huella coincide
+original opcional ../Entrega_final_final.ipynb sin cambios (después),PASS,huella coincide
+original opcional evidencia_original/Entrega_final_final.ipynb sin cambios (después),NO DISPONIBLE,NO DISPONIBLE en esta copia; no se verifica

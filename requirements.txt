@@ -1,0 +1,6 @@
+# Versiones con las que se ejecutó y verificó el caso (Python 3.13.11)
+numpy==2.4.2
+pandas==3.0.1
+scikit-learn==1.6.1
+statsmodels==0.14.6
+matplotlib==3.10.8

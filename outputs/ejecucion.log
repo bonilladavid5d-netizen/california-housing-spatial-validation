@@ -1,0 +1,41 @@
+19:43:36 1. Integridad de originales y datos
+19:43:36 2. Particiones
+19:43:43 
+          diseno  fold  n_prueba  n_celdas_prueba  n_entrenamiento_antes_margen  n_excluidas_margen  n_entrenamiento_final  pct_excluido  dist_min_entrenamiento_prueba_km
+holdout_original     1      4128              126                         16512                   0                  16512          0.00                               NaN
+    aleatorio_5f     1      4128              126                         16512                   0                  16512          0.00                               NaN
+    aleatorio_5f     2      4128              136                         16512                   0                  16512          0.00                               NaN
+    aleatorio_5f     3      4128              136                         16512                   0                  16512          0.00                               NaN
+    aleatorio_5f     4      4128              138                         16512                   0                  16512          0.00                               NaN
+    aleatorio_5f     5      4128              131                         16512                   0                  16512          0.00                               NaN
+     espacial_5f     1      4128               33                         16512                3216                  13296         19.48                         10.005996
+     espacial_5f     2      4128               35                         16512                3368                  13144         20.40                         10.006800
+     espacial_5f     3      4128               35                         16512                 944                  15568          5.72                         10.007557
+     espacial_5f     4      4128               36                         16512                2294                  14218         13.89                         10.007557
+     espacial_5f     5      4128               37                         16512                2002                  14510         12.12                         10.002118
+19:43:43 3. Estimación y predicción fuera de muestra
+19:43:57   holdout_original fold 1: entrenamiento=16512, prueba=4128, RMSE rf=0.4964 (14s)
+19:44:11   aleatorio_5f fold 1: entrenamiento=16512, prueba=4128, RMSE rf=0.4970 (14s)
+19:44:25   aleatorio_5f fold 2: entrenamiento=16512, prueba=4128, RMSE rf=0.4883 (14s)
+19:44:39   aleatorio_5f fold 3: entrenamiento=16512, prueba=4128, RMSE rf=0.5080 (13s)
+19:44:52   aleatorio_5f fold 4: entrenamiento=16512, prueba=4128, RMSE rf=0.5159 (13s)
+19:45:06   aleatorio_5f fold 5: entrenamiento=16512, prueba=4128, RMSE rf=0.5004 (14s)
+19:45:17   espacial_5f fold 1: entrenamiento=13296, prueba=4128, RMSE rf=0.6970 (11s)
+19:45:28   espacial_5f fold 2: entrenamiento=13144, prueba=4128, RMSE rf=0.6119 (11s)
+19:45:41   espacial_5f fold 3: entrenamiento=15568, prueba=4128, RMSE rf=0.7825 (13s)
+19:45:52   espacial_5f fold 4: entrenamiento=14218, prueba=4128, RMSE rf=0.5923 (11s)
+19:46:04   espacial_5f fold 5: entrenamiento=14510, prueba=4128, RMSE rf=0.5754 (12s)
+19:46:04 4. Verificación de predicciones y métricas leídas de disco
+19:46:05 5. Reproducción del split original
+19:46:05 
+                                                evaluacion     rmse        r2  rmse_notebook  r2_notebook  rmse_referencia  r2_referencia  dif_rmse_vs_referencia  dif_r2_vs_referencia coincide_referencia_6_decimales
+MCO dentro de muestra (base completa, como en el notebook) 0.724100  0.606233       0.724100     0.606233              NaN            NaN                     NaN                   NaN                  sin referencia
+                        Media de entrenamiento, prueba 20% 1.153189 -0.000024            NaN          NaN         1.153189            NaN            4.995719e-07                   NaN                              sí
+                                           MCO, prueba 20% 0.719738  0.610455            NaN          NaN         0.719738       0.610455            5.340406e-08         -3.105202e-07                              sí
+                                 Random Forest, prueba 20% 0.496386  0.814712       0.496417     0.814688         0.496417       0.814688           -3.106209e-05          2.370270e-05                              no
+                             Gradient Boosting, prueba 20% 0.504268  0.808781       0.504268     0.808781         0.504268       0.808781           -7.915017e-08         -3.040154e-07                              sí
+19:46:05 6. Errores por segmento, celdas y distribución
+19:46:05 7. Coeficientes e importancias (split original)
+19:46:26 8. Figuras
+19:46:26 9. Integridad final
+19:46:26 Ejecución completa en 170.3 s: PASS=55, FAIL=0, NO DISPONIBLE (N/A)=2

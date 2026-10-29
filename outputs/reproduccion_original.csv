@@ -1,0 +1,6 @@
+evaluacion,rmse,r2,rmse_notebook,r2_notebook,rmse_referencia,r2_referencia,dif_rmse_vs_referencia,dif_r2_vs_referencia,coincide_referencia_6_decimales
+"MCO dentro de muestra (base completa, como en el notebook)",0.7241001217,0.6062326852,0.7241,0.606233,,,,,sin referencia
+"Media de entrenamiento, prueba 20%",1.1531895,-2.396812371e-05,,,1.153189,,4.995718657e-07,,sí
+"MCO, prueba 20%",0.7197380534,0.6104546895,,,0.719738,0.610455,5.340406195e-08,-3.10520213e-07,sí
+"Random Forest, prueba 20%",0.4963859379,0.8147117027,0.496417,0.814688,0.496417,0.814688,-3.106209314e-05,2.370269991e-05,no
+"Gradient Boosting, prueba 20%",0.5042679208,0.808780696,0.504268,0.808781,0.504268,0.808781,-7.915017075e-08,-3.040154344e-07,sí

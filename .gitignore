@@ -1,0 +1,20 @@
+# Evidencia privada: el notebook original contiene datos personales de los autores
+evidencia_original/
+
+# Paquetes de entrega y documentos internos de revisión
+*.zip
+ESTADO_ENTREGA.md
+ESTADO_CIERRE.md
+PROMPT_*.txt
+
+# Entornos y cachés
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# Se versionan a propósito: data/california_housing.csv (censo agregado público),
+# outputs/ (predicciones, métricas, tablas) y figures/.
